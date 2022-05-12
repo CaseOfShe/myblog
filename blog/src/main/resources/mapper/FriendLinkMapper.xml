@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mapper.FriendLinkMapper">
+
+    <resultMap id="BaseResultMap" type="com.study.entity.FriendLink">
+            <id property="linId" column="lin_id" jdbcType="INTEGER"/>
+            <result property="linName" column="lin_name" jdbcType="VARCHAR"/>
+            <result property="linkAvatar" column="link_avatar" jdbcType="VARCHAR"/>
+            <result property="linkAddress" column="link_address" jdbcType="VARCHAR"/>
+            <result property="linkIntro" column="link_intro" jdbcType="VARCHAR"/>
+            <result property="linkTime" column="link_time" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        lin_id,lin_name,link_avatar,
+        link_address,link_intro,link_time
+    </sql>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mapper.IndexUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.study.entity.IndexUser">
+            <id property="iId" column="i_id" jdbcType="INTEGER"/>
+            <result property="iName" column="i_name" jdbcType="VARCHAR"/>
+            <result property="iPassword" column="i_password" jdbcType="VARCHAR"/>
+            <result property="iRooter" column="i_rooter" jdbcType="INTEGER"/>
+            <result property="iCreatetime" column="i_createtime" jdbcType="VARCHAR"/>
+            <result property="iUpdatetime" column="i_updatetime" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        i_id,i_name,i_password,
+        i_rooter,i_createtime,i_updatetime
+    </sql>
+</mapper>

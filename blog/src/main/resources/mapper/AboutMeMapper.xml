@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mapper.AboutMeMapper">
+
+    <resultMap id="BaseResultMap" type="com.study.entity.AboutMe">
+            <id property="abId" column="ab_id" jdbcType="INTEGER"/>
+            <result property="abTitle" column="ab_title" jdbcType="VARCHAR"/>
+            <result property="abContent" column="ab_content" jdbcType="VARCHAR"/>
+            <result property="abImage" column="ab_image" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ab_id,ab_title,ab_content,
+        ab_image
+    </sql>
+</mapper>

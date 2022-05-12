@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mapper.TbMenuMapper">
+
+    <resultMap id="BaseResultMap" type="com.study.entity.TbMenu">
+            <id property="escId" column="esc_id" jdbcType="INTEGER"/>
+            <result property="escName" column="esc_name" jdbcType="VARCHAR"/>
+            <result property="escPath" column="esc_path" jdbcType="VARCHAR"/>
+            <result property="escComponent" column="esc_component" jdbcType="VARCHAR"/>
+            <result property="escIcon" column="esc_icon" jdbcType="VARCHAR"/>
+            <result property="escCreateTime" column="esc_create_time" jdbcType="VARCHAR"/>
+            <result property="escUpdateTime" column="esc_update_time" jdbcType="VARCHAR"/>
+            <result property="orderNum" column="order_num" jdbcType="TINYINT"/>
+            <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
+            <result property="isDisabled" column="is_disabled" jdbcType="BOOLEAN"/>
+            <result property="isHidden" column="is_hidden" jdbcType="BOOLEAN"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        esc_id,esc_name,esc_path,
+        esc_component,esc_icon,esc_create_time,
+        esc_update_time,order_num,parent_id,
+        is_disabled,is_hidden
+    </sql>
+</mapper>

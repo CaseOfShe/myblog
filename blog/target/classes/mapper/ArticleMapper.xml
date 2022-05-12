@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mapper.ArticleMapper">
+
+    <resultMap id="BaseResultMap" type="com.study.entity.Article">
+            <id property="atId" column="at_id" jdbcType="INTEGER"/>
+            <result property="atAuthor" column="at_author" jdbcType="VARCHAR"/>
+            <result property="atCategory" column="at_category" jdbcType="INTEGER"/>
+            <result property="atImg" column="at_img" jdbcType="VARCHAR"/>
+            <result property="atTitle" column="at_title" jdbcType="VARCHAR"/>
+            <result property="atContent" column="at_content" jdbcType="VARCHAR"/>
+            <result property="atCreatetime" column="at_createtime" jdbcType="VARCHAR"/>
+            <result property="atUpdatetime" column="at_updatetime" jdbcType="VARCHAR"/>
+            <result property="atTop" column="at_top" jdbcType="BOOLEAN"/>
+            <result property="atDraft" column="at_draft" jdbcType="BOOLEAN"/>
+            <result property="atDelete" column="at_delete" jdbcType="BOOLEAN"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        at_id,at_author,at_category,
+        at_img,at_title,at_content,
+        at_createtime,at_updatetime,at_top,
+        at_draft,at_delete
+    </sql>
+</mapper>

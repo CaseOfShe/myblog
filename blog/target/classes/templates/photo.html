@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>关于我</title>
+    <link rel="stylesheet" href="css/aboutme.css" />
+    <link rel="shortcut icon" th:href="@{/admin/images/icon/favicon.ico}">
+
+    <style>
+        @font-face {
+            font-family: "ziti1";
+            src: url(font/Mengshen-Handwritten.ttf);
+        }
+        html {
+            height: 100%;
+        }
+        * {
+            height: 100%;
+        }
+        .box1{
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 30%;
+            background: url(image/bg3.png);
+            background-size: cover;
+        }
+
+        .box1_1{
+
+            height: 17%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            z-index: 5;
+            font-size: 13px;
+            line-height: 50px;
+
+        }
+        .box1_1_left{
+            color: #fff2f2;
+            margin: auto 28px;
+            align-items: center;
+
+
+        }
+        .box1_1_right{
+
+            margin-right: 50px;
+            color: #fff2f2;
+        }
+        .box1_1_right li{
+            float: left;
+            padding: 0 20px 0 10px;
+        }
+        .box1_1_right li a{
+            color: #fff2f2;
+            text-decoration: none;
+        }
+
+        .box1_2 {
+            font-family: ziti1;
+            text-align: center;
+            font-size: 41px;
+            height: 83%;
+            line-height: 730%;
+            color: #fff;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 62%;
+            background-image: linear-gradient(to right,rgb(253,243,233), rgb(241,239,246),rgb(239,248,243));
+        }
+        .box2_1{
+            box-sizing: border-box;
+            width: 50%;
+            height: 70%;
+            background-color: #fff;
+            margin: 0 auto;
+            transform: translateY(30px);
+            border-radius: 2%;
+            box-shadow: 1px 1px 3px #888888;
+            position: relative;
+
+        }
+
+        .box2_1 img{
+            position: absolute;
+            left: 50%;
+            height: 100px;
+            transform: translate(-50%,10%);
+        }
+        .box2_1 p{
+            position: absolute;
+
+            top: 55%;
+            left: 5%;
+            height: 100px;
+            font-size: 13px;
+            line-height: 24px;
+
+        }
+
+        .box3 {
+            width: 100%;
+            height: 8%;
+            background-image: linear-gradient(to right,rgb(35,200,183), rgb(35,171,210));
+        }
+        .box3 p {
+            text-align: center;
+            width: 200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 30px;
+        }
+        .menu5{
+            height: 393px;
+            width: 1000px;
+            display: flex;
+            margin: 0 auto;
+            flex: 1;
+
+        }
+        .menu51,.menu53{
+            width: 20%;
+        }
+        .menu52{
+            width: 60%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu511{
+            box-sizing: border-box;
+
+            background-color: #91785b;
+            height: 33%;
+
+            /*border: 5px solid black;*/
+
+        }
+
+        .menu512{
+            background-color: rgb(210, 84, 84);
+            height: 67%;
+            overflow: hidden;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+        }
+        .menu512 img{
+            width: 100%;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        .menu512 img:hover{
+            transform: scale(1.1);
+        }
+        .menu521{
+            width: 100%;
+            height: 50%;
+
+            display: flex;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+        }
+        .menu5211{
+            width: 50%;
+            height: 100%;
+
+            overflow: hidden;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+        }
+        .menu5211 img,.menu5212 img,.menu5213 img,.menu5221 img,.menu531 img,.menu532 img,.menu533 img{
+            width: 100%;
+            transition: all 0.4s;
+        }
+        .menu5211 img:hover,.menu5212 img:hover,.menu5213 img:hover,.menu5221 img:hover,.menu531 img:hover,.menu532 img:hover,.menu533 img:hover{
+            transform: scale(1.1);
+        }
+        .menu5212{
+            width: 25%;
+
+            overflow: hidden;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+        }
+
+        .menu5213{
+            width: 25%;
+
+            overflow: hidden;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+        }
+        .menu522{
+            width: 100%;
+            height: 50%;
+
+            display: flex;
+        }
+        .menu5221{
+            width: 50%;
+
+            overflow: hidden;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+            height: 100%;
+        }
+        .menu5222{
+            box-sizing: border-box;
+            height: 100%;
+            width: 50%;
+            background-color: #a71930;
+            /*border: 5px solid black;*/
+
+        }
+        .menu5222 p{
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .menu53{
+            display: flex;
+            flex-direction: column;
+        }
+        .menu531,.menu533{
+            width: 100%;
+
+            height: 33%;
+            overflow: hidden;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+        }
+        .menu532{
+            width: 100%;
+            height: 34%;
+            overflow: hidden;
+            /*border: 5px solid black;*/
+            box-sizing: border-box;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: 0px auto;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .container ul{
+            display: flex;
+        }
+        .container li{
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            border-left: 1px solid #194b8d;
+            box-shadow: 0 0 25px #000;
+            transition: all 0.5s;
+        }
+        .container li img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .container ul:hover li{
+            width: 20%;
+        }
+        .container ul li:hover {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box1_1">
+        <div class="box1_1_left">一字先生</div>
+        <ul class="box1_1_right">
+            <li><a th:href="@{/index}" >首页</a></li>
+            <li><a th:href="@{/link}" >友链</a></li>
+            <li><a th:href="@{/aboutme}">关于</a></li>
+            <li><a th:href="@{/message}" >留言</a></li>
+        </ul>
+    </div>
+
+    <div class="box1_2">图片</div>
+</div>
+<div class="box2">
+    <div class="container">
+        <ul>
+            <li th:each="image:${images}"><img th:src="${image.img}"></li>
+        </ul>
+    </div>
+
+<!--    <div class="menu5">-->
+<!--        <div class="menu51">-->
+<!--            <div class="menu511">-->
+
+
+<!--            </div>-->
+<!--            <div class="menu512">-->
+<!--                <img src="./p10.jpg" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="menu52">-->
+<!--            <div class="menu521">-->
+<!--                <div class="menu5211">-->
+<!--                    <img src="./p11.jpg" alt="">-->
+<!--                </div>-->
+<!--                <div class="menu5212">-->
+<!--                    <img src="./p13.jpg" alt="">-->
+<!--                </div>-->
+<!--                <div class="menu5213">-->
+<!--                    <img src="./p14.jpg" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="menu522">-->
+<!--                <div class="menu5221">-->
+
+
+<!--                    <img src="./p12.jpg" alt="">-->
+<!--                </div>-->
+<!--                <div class="menu5222">-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="menu53">-->
+<!--            <div class="menu531">-->
+<!--                <img src="./p15.jpg" alt="" class="">-->
+<!--            </div>-->
+<!--            <div class="menu532">-->
+<!--                <img src="./p16.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="menu533">-->
+<!--                <img src="./p17.jpg" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="box2_1">-->
+
+
+
+<!--    </div>-->
+</div>
+<div class="box3">
+    <p>2022 - 2022 By Mr.One <br/></p>
+</div>
+</body>
+</html>
